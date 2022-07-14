@@ -56,9 +56,9 @@ jobs:
     - name: executing remote ssh commands to deploy
       uses: appleboy/ssh-action@master
       with:
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.USER }}
-        key: ${{ secrets.SSH_KEY }}
+        host: 51.250.100.101
+        username: cocosi
+        key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCpyTfbL8bDLNG9Y9N3oQ8hNml/TmC2t2vusdOK/whCfX1gqk99467aW6AZsZ5r+XiXm6aaNW4+B8M8KVhM+c+ZScI5Jwj5piHV57uI3owKJZumvai1jvOr7hBrWOeBZm3WoNjntLaECO948uTywBppmhcw5ZkP5RBx9CRdfMMLOOTVQfWGEUg1OkxJC8HmEV3pfgf/zWyE7UaSvxykwLxWZCu09/82a/sRX4BxLQYfOeDVfwbrrj64KnxmONi1MR7zJw8Jlm4DRb66gh0pCP+cjjegUDNUuRpC8ckJLG2XHCnn09DNcDF5mRUOmISdTmZiSHIMZxXOFfzLmA1kbPfxV6q92GhH4hD/t5u30cOUGnNzrVADzvisplutHoS3IUgvKpTYKa08DTTa4SAWGbE91D6dvgjCQ0nVf0hy0KylqGtzDhsg1C6bn3XD7KvLhohHJ7Vglnk3rPAQtEVP2qbdT1KI1CH2qabihjd6T3852JoTukNbNWInnKARvzbEyhU= cocosi@cocosi
         script: |
           # Выполняет pull образа с DockerHub
           sudo docker pull cocosi383/infra_actions:latest
