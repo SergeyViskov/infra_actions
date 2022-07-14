@@ -61,7 +61,7 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         script: |
           # Выполняет pull образа с DockerHub
-          sudo docker pull cocosi383/infra_actions
+          sudo docker pull cocosi383/infra_actions:latest
           #остановка всех контейнеров
           sudo docker stop ps -a -q | xargs sudo docker stop
-          sudo docker run --rm -d -p 5000:5000 cocosi383/infra_actions
+          sudo docker run --rm -d -p 5000:5000 cocosi383/infra_actions:latest
