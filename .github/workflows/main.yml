@@ -58,10 +58,10 @@ jobs:
       with:
         host: 51.250.100.101
         username: cocosi
-        key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCpyTfbL8bDLNG9Y9N3oQ8hNml/TmC2t2vusdOK/whCfX1gqk99467aW6AZsZ5r+XiXm6aaNW4+B8M8KVhM+c+ZScI5Jwj5piHV57uI3owKJZumvai1jvOr7hBrWOeBZm3WoNjntLaECO948uTywBppmhcw5ZkP5RBx9CRdfMMLOOTVQfWGEUg1OkxJC8HmEV3pfgf/zWyE7UaSvxykwLxWZCu09/82a/sRX4BxLQYfOeDVfwbrrj64KnxmONi1MR7zJw8Jlm4DRb66gh0pCP+cjjegUDNUuRpC8ckJLG2XHCnn09DNcDF5mRUOmISdTmZiSHIMZxXOFfzLmA1kbPfxV6q92GhH4hD/t5u30cOUGnNzrVADzvisplutHoS3IUgvKpTYKa08DTTa4SAWGbE91D6dvgjCQ0nVf0hy0KylqGtzDhsg1C6bn3XD7KvLhohHJ7Vglnk3rPAQtEVP2qbdT1KI1CH2qabihjd6T3852JoTukNbNWInnKARvzbEyhU= cocosi@cocosi
+        key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDXq579cd6mCULlsFSpL+3NNfJhAmglb1oHVbOZAaxGvRS+W0ySEDdecg7Cw8gcoCpwUEPdalJ/eQbHtca6ArIs2vsShjgfbLEWMUTrXOJgB/FIFBrH+xOshfMaJJpPy4Gwmu4/hV81QoYUdxeDpjAwOGO4MhSU6n+hLiwAyP3X5z24NC8zU4WVbfSXhX2U3FZJ7X8A6oec1xa8jqJJjcHA/JEbKkXIM4XSkynzuIEMEwP+8ap0UyS/GAl3/UQ+lX/X5O2WnQlLUUe9p4TsyPJiX9zQB3NUdIm038TXC6pojoj3NltsEwaXYr3Da6uYvOpxlwA4cfUB2cbYh+Kc6nrjXxqm93+nk07kCDB4g05XLoJRAlbMSzflGSsLiiU9tw+eLzESr0qpxup6gfulqos85TeT8uIs/fBPnfHA4c+nZAqB5x11MjjpdMriR/OAOaR1L43DZ5zmediAR7865wJmGOZr3FP7rQxwExBMuVfB07ZOFPRU6RSC9s+rFMfKOJc= Сергей@Gray
         script: |
           # Выполняет pull образа с DockerHub
-          sudo docker pull cocosi383/infra_actions:latest
+          sudo docker pull cocosi383/infra_actions
           #остановка всех контейнеров
           sudo docker stop ps -a -q | xargs sudo docker stop
-          sudo docker run --rm -d -p 5000:5000 cocosi383/infra_actions:latest
+          sudo docker run --rm -d -p 5000:5000 cocosi383/infra_actions
